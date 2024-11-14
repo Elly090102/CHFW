@@ -1,0 +1,189 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+}
+
+#backgroundVideo video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;  /* Set to viewport width */
+    height: 100vh; /* Set to viewport height */
+    object-fit: cover; /* Ensure video covers the entire viewport without stretching */
+    z-index: -1; /* Keeps video behind content */
+    opacity: 0.2; /* Optional: Adjust transparency if needed */
+  }
+
+.brands {
+    font-size: 4rem; /* Increased font size */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 60px; /* Increased margin to move it higher */
+    color: #fff;
+}
+
+.explore {
+    font-size: 2.2rem; /* Increased font size */
+    font-weight: bold;
+    text-align: center;
+    margin: 40px 0; /* Added margin to create space between header and images */
+    padding: 0 20px;
+}
+
+.brand-images-container {
+    width: 100%;
+    background-color: white;
+    border: 2px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-images {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.brand-logo {
+    width: 180px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.brand-logo:hover {
+    transform: scale(1.1);
+}
+
+/* iPad Air 12 Specific Styles */
+@media (min-width: 2360px) and (max-width: 1640px) {
+    .brands {
+        font-size: 4.5rem; /* Adjusted font size for larger screens */
+        margin-top: 80px; /* Adjusted margin for larger screens */
+    }
+
+    .explore {
+        font-size: 2.5rem; /* Adjusted font size for larger screens */
+        margin: 50px 0; /* Adjusted margin for larger screens */
+    }
+
+    .brand-logo {
+        width: 200px; /* Adjusted logo size for larger screens */
+    }
+}
+
+@media (orientation: landscape) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .brand-images {
+        justify-content: space-evenly;
+        width: 90%;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+    .brand-logo {
+        width: 220px;
+    }
+
+    .back-button {
+        margin-top: 40px;
+    }
+
+    .explore {
+        font-size: 2.2rem; /* Increased font size */
+        margin: 20px 0;
+        padding: 0 40px;
+    }
+
+    .brands {
+        font-size: 4rem; /* Increased font size */
+        margin-bottom: 20px;
+    }
+
+    .menu-popup {
+        width: 350px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .brand-images {
+        justify-content: space-around;
+        margin: 50px 0;
+    }
+
+    .brand-logo {
+        width: 240px;
+    }
+
+    .explore {
+        font-size: 2.2rem; /* Increased font size */
+        margin: 30px 0;
+    }
+
+    .brands {
+        font-size: 4rem; /* Increased font size */
+    }
+}
+
+.go-back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.go-back-button img {
+    width: 50px; /* Adjust the size of the arrow */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.go-back-button img:hover {
+    transform: scale(1.1); /* Slightly enlarge the arrow on hover */
+}
+
+/* Burger Menu Button Styling */
+#menuBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  .burger-icon {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 5px 0;
+  }
+  

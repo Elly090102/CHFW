@@ -1,0 +1,86 @@
+/* Full body styling */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;  /* Ensure full width */
+  height: 100vh; /* Ensure full height */
+}
+
+/* Background Video Styling */
+#backgroundVideo video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;  /* Set to viewport width */
+  height: 100vh; /* Set to viewport height */
+  object-fit: cover; /* Ensure video covers the entire viewport without stretching */
+  z-index: -1; /* Keeps video behind content */
+  opacity: 0.5; /* Optional: Adjust transparency if needed */
+}
+
+/* Main Page Text */
+#mainText {
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* Center horizontally and vertically */
+  text-align: left;  /* Keep text aligned to the left */
+  z-index: 1;
+  color: white;
+}
+
+#mainText h1 {
+  font-family: 'Monotage Sans', sans-serif;
+  font-size: 256px; /* Increased size */
+  font-weight: bold;
+  fill: none;
+  margin: 0;
+  line-height: 0.8; /* Decreased line height to bring lines closer together */
+  text-transform: uppercase;
+  -webkit-background-clip: text; /* Clip background color to text */
+  background-image: linear-gradient(to right, white, white); /* White outline effect */
+  display: inline-block; /* Ensure text remains left-aligned */
+}
+
+/* Sign In and Menu Button Styling */
+#signInBtn, #menuBtn {
+  position: absolute;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#signInBtn {
+  top: 20px;
+  left: 20px;
+}
+
+#menuBtn {
+  top: 20px;
+  right: 20px;
+}
+
+.burger-icon {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+#signInIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}

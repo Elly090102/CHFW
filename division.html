@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Division - Scandinavian Brand</title>
+    <link rel="stylesheet" href="division-stylesheet.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap">
+</head>
+<body>
+    <div class="content">
+        <div class="top-section">
+            <div class="white-rectangle">
+                <img src="images/1.png" alt="Division Main" class="main-image">
+                <div class="description">
+                    <h1>Division</h1>
+                    <p>(di)vision is a Copenhagen based fashion brand founded in 2018 by Simon Wick. 
+                        they have made headlines all over the world from their performative fashion shows and unique approach to creating clothes.</p>
+                </div>
+            </div>
+        </div>
+        <div class="additional-images">
+            <img src="images/division 1.jpeg" alt="Division 1" class="additional-image" >
+            <img src="images/division 2.jpg" alt="Division 2" class="additional-image" >
+            <img src="images/division 3.jpg" alt="Division 3" class="additional-image" >
+        </div>
+    </div>
+    <div class="go-back-button">
+       <a href="brands.html"><img src="images/arrow-back.png" alt="Go Back" onclick="goBack()"></a>
+    </div>
+    <script>
+    function goBack() {
+        window.history.back();
+    }
+    </script>
+
+<script>
+    document.querySelectorAll('.additional-image').forEach(image => {
+        image.addEventListener('click', function() {
+            const isActive = this.classList.contains('active');
+            document.querySelectorAll('.additional-image').forEach(img => {
+                img.classList.remove('active');
+                img.classList.add('grayscale'); // Add grayscale class to all images
+                img.classList.add('blur-background'); // Add blur class to all images
+            });
+            if (!isActive) {
+                this.classList.add('active');
+                this.classList.remove('grayscale'); // Remove grayscale from the clicked image
+                this.classList.remove('blur-background'); // Remove blur from the clicked image
+                document.querySelector('.top-section').classList.add('blur-background');
+                document.querySelector('.white-rectangle').classList.add('blur-background');
+                document.querySelector('.additional-images').classList.add('active');
+            } else {
+                document.querySelector('.top-section').classList.remove('blur-background');
+                document.querySelector('.white-rectangle').classList.remove('blur-background');
+                document.querySelector('.additional-images').classList.remove('active');
+
+                // Remove blur and grayscale from all images
+                document.querySelectorAll('.additional-image').forEach(img => {
+                    img.classList.remove('blur-background');
+                    img.classList.remove('grayscale');
+                });
+            }
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>

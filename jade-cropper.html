@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jade Cropper - Scandinavian Brand</title>
+    <link rel="stylesheet" href="jade-cropper-stylesheet.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap">
+</head>
+<body>
+    <div class="content">
+        <div class="top-section">
+            <div class="white-rectangle">
+                <img src="images/2.png" alt="Jade Cropper Main" class="main-image">
+                <div class="description">
+                    <h1>Jade Cropper</h1>
+                    <p>With a focus on innovative construction, intricate details, and embracing imperfection and asymmetry, Jade Cropper seeks to challenge norms, reinvent, and inspire versatile, multifunctional garments as a means of self-expression.</p>
+                </div>
+            </div>
+        </div>
+        <div class="additional-images">
+            <img src="images/jade cropper 1.jfif" alt="Jade Cropper 1" class="additional-image">
+            <img src="images/jade cropper 2.jfif" alt="Jade Cropper 2" class="additional-image">
+            <img src="images/jade cropper 3.jfif" alt="Jade Cropper 3" class="additional-image">
+        </div>
+    </div>
+    <div class="go-back-button">
+   <a href="brands.html"><img src="images/arrow-back.png" alt="Go Back" onclick="goBack()"></a>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        </script>
+    
+    <script>
+        document.querySelectorAll('.additional-image').forEach(image => {
+            image.addEventListener('click', function() {
+                const isActive = this.classList.contains('active');
+                document.querySelectorAll('.additional-image').forEach(img => {
+                    img.classList.remove('active');
+                    img.classList.add('grayscale'); // Add grayscale class to all images
+                    img.classList.add('blur-background'); // Add blur class to all images
+                });
+                if (!isActive) {
+                    this.classList.add('active');
+                    this.classList.remove('grayscale'); // Remove grayscale from the clicked image
+                    this.classList.remove('blur-background'); // Remove blur from the clicked image
+                    document.querySelector('.top-section').classList.add('blur-background');
+                    document.querySelector('.white-rectangle').classList.add('blur-background');
+                    document.querySelector('.additional-images').classList.add('active');
+                } else {
+                    document.querySelector('.top-section').classList.remove('blur-background');
+                    document.querySelector('.white-rectangle').classList.remove('blur-background');
+                    document.querySelector('.additional-images').classList.remove('active');
+    
+                    // Remove blur and grayscale from all images
+                    document.querySelectorAll('.additional-image').forEach(img => {
+                        img.classList.remove('blur-background');
+                        img.classList.remove('grayscale');
+                    });
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

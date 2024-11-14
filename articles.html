@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles Main Page</title>
+    <meta name="articles" content="Something Fun to Read">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="articles.css">
+    <link rel="stylesheet" href="popup.css"> <!-- Burger menu -->
+</head>
+
+<body>
+    <!-- Background GIF -->
+    <div class="background">
+        <!-- Top text -->
+        <div class="top-left-text">
+            <div class="discover">
+                <p>Discover</p>
+            </div>
+            <div class="sth-fun">
+                <p>Something fun to read</p>
+            </div>
+        </div>
+
+        <!-- Flex container for the main images and text -->
+        <div class="article-container">
+            <!-- Picture Box 1 -->
+            <a href="sus.html" class="picture-box">
+                <img src="images/sus.png" class="image" alt="Sustainable Fashion">
+                <p class="subheading">ENVIRONMENTALLY FRIENDLY</p>
+                <p class="heading">HOW DO WE DO IT</p>
+            </a>
+
+            <!-- Picture Box 2 -->
+            <a href="color.html" class="picture-box">
+                <div><img src="images/Color.png" class="image" alt="Color Theory"></div>
+                <p class="subheading">A BIT OF COLOR THEORY</p>
+                <p class="heading">COLORS CAN CHANGE EVERYTHING</p>
+            </a>
+
+            <!-- Picture Box 3 -->
+            <a href="wardrobe.html" class="picture-box">
+                <div><img src="images/wardrobe.png" class="image" alt="Wardrobe Tricks"></div>
+                <p class="subheading">DON'T KNOW WHAT TO WEAR?</p>
+                <p class="heading">HOW TO EXPAND YOUR WARDROBE</p>
+            </a>
+        </div>
+        
+        <!-- JavaScript to ensure the entire <a> element is clickable -->
+<script>
+    // Select all links with the class 'picture-box'
+    document.querySelectorAll('.picture-box').forEach(box => {
+        // Add click event to each box
+        box.addEventListener('click', function(event) {
+            // Check if image is clicked directly
+            if (event.target.tagName === 'IMG') {
+                // Prevent any default action if needed
+                event.preventDefault();
+                // Redirect to the link's href
+                window.location.href = box.href;
+            }
+        });
+    });
+</script>
+
+        <!-- Back button -->
+        <div class="go-back-button"> 
+            <img src="images/arrow-back.png" alt="Go Back" onclick="goBack()">
+             </div>
+         
+             <script>
+                 function goBack() {
+                    // window.history.back();
+                    window.location.href = "index.html";
+                 }
+                 </script>
+
+
+
+    <!--Burger Menu-->
+
+   <div id="menuBtn" onclick="openPopup()">
+        <div class="burger-icon"></div>
+        <div class="burger-icon"></div>
+        <div class="burger-icon"></div>
+      </div>
+      
+    <script src="script-sub-page.js"></script>
+    </div>
+</body>
+</html>

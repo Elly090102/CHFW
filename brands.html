@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scandinavian Brands of the Week</title>
+    <link rel="stylesheet" href="stylesheet.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap">
+     <link rel="stylesheet" href="popup.css">
+
+</head>
+<body>
+    <div id="backgroundVideo">
+        <video src="./images/Copenhagen Fashion Week.mp4" autoplay loop muted></video>
+      </div>
+    <div class="brands">BRANDS OF THE WEEK</div>
+    <div class="explore">
+        <p>Explore the best of Nordic style with top Scandinavian brands known for their minimalist designs and quality craftsmanship.</p>
+        <p>Discover the timeless aesthetics they bring to our event!</p>
+    </div>
+    <div class="brand-images-container">
+        <div class="brand-images">
+            <a href="division.html"><img class="brand-logo" src="images/1.png" alt="Brand 1"></a>
+            <a href="jade-cropper.html"><img class="brand-logo" src="images/2.png" alt="Brand 2"></a>
+            <img class="brand-logo" src="images/3.png" alt="Brand 3">
+            <img class="brand-logo" src="images/4.png" alt="Brand 4">
+        </div>
+    </div>
+    <div class="go-back-button">
+        <a href="index.html"><img src="images/arrow-back.png" alt="Go Back" onclick="goBack()"></a>
+         </div>
+     
+         <script>
+             function goBack() {
+                 window.history.back();
+             }
+             </script>
+    <div id="menuBtn" onclick="openPopup()">
+        <div class="burger-icon"></div>
+        <div class="burger-icon"></div>
+        <div class="burger-icon"></div>
+      </div>
+    <script src="script-sub-page.js"></script>
+</body>
+</html>

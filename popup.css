@@ -1,0 +1,64 @@
+/* popup.css */
+
+/* Popup Overlay for Menu */
+#popupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.147);
+    backdrop-filter: blur(10px);
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  /* Popup menu layout */
+  #popupMenu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 25px;
+    width: 50%;
+    height: 50%;
+    place-items: center;
+    position: relative;
+  }
+  
+  /* Close button styling for menu */
+  #closePopup {
+    position: absolute;
+    top: 10px;
+    right: -50px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  /* Bubble styling */
+  .bubble {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 5px solid white;
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .bubble img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    padding: 5%;
+  }
+  

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1024, height=1366, initial-scale=1.0">
+  <title>Popup Menu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Background Video Overlay -->
+<div id="backgroundVideo">
+  <video src="./images/Copenhagen Fashion Week.mp4" autoplay loop muted></video>
+</div>
+
+<!-- Main Page Text -->
+<div id="mainText">
+  <h1 class="text-large">COPENHAGEN</h1>
+  <h1 class="text-large">FASHION</h1>
+  <h1 class="text-large">WEEK</h1>
+</div>
+
+<!-- Popup Overlay for Menu -->
+<div id="popupOverlay">
+  <div id="popupMenu">
+    <div id="closePopup" onclick="closePopup()">X</div>
+    <!-- Bubbles with images -->
+    <div class="bubble" onclick="navigateTo('404.html')">
+      <img src="./images/Info.png" alt="Info">
+    </div>
+    <div class="bubble" onclick="navigateTo('LLocation.html')">
+      <img src="./images/Location.png" alt="Location">
+    </div>
+    <div class="bubble" onclick="navigateTo('index.html')">
+      <img src="./images/Home.png" alt="Home">
+    </div>
+    <div class="bubble" onclick="navigateTo('articles.html')">
+      <img src="./images/News.png" alt="News">
+    </div>
+    <div class="bubble" onclick="navigateTo('404.html')">
+      <img src="./images/Events.png" alt="Calendar">
+    </div>
+    <div class="bubble" onclick="navigateTo('brands.html')">
+      <img src="./images/Chanel.png" alt="Brands">
+    </div>
+  </div>
+</div>
+
+
+<!-- Sign In and Menu Buttons -->
+<div id="signInBtn" onclick="openSignIn()">
+  <img id="signInIcon" src="./images/Login.png" alt="Sign In Icon">Sign In
+</div>
+<div id="menuBtn" onclick="openPopup()">
+  <div class="burger-icon"></div>
+  <div class="burger-icon"></div>
+  <div class="burger-icon"></div>
+</div>
+
+<script src="script-sub-page.js"></script>
+
+<script>
+  function openSignIn() {
+    // Redirect to the 404 error page
+    window.location.href = '404.html';
+  }
+</script>
+
+</body>
+</html>

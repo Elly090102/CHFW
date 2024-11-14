@@ -1,0 +1,223 @@
+
+  body, html {
+    width: 1366px;
+    height: 1024px;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background-image: url('images/CopenhagenFashionWeek-ezgif.com-video-to-gif-converter.gif');
+    background-position: center;
+    background-size: cover;
+    filter: blur(12.5px) brightness(0.1);
+    z-index: -1;
+    pointer-events: none;
+}
+  
+  .top-left-text {
+    margin-left: 95px;
+    color: #ffffff;
+    font-family: "Monotage Sans";
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.discover {
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 1.5px;
+    display: flex;
+    height: 140px;
+    margin: 0;
+}
+
+.sth-fun {
+    font-size: 39px;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+    margin: 0; 
+    display: flex;
+
+}
+  
+.article-container {
+    display: flex;
+    flex-direction: row;
+    gap: 165px;
+    margin-top: 35px;
+    margin-left: 95px;
+    margin-right: 95px;
+}
+
+.picture-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    text-align: left;
+    color: white;
+    width: 270px; 
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.picture-box, .picture-box img {
+    pointer-events: auto;
+}
+
+.image {
+    width: 270px;
+    height: 387px;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    border: 10px solid rgb(255, 255, 255);
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 30px;
+    margin-bottom: 5px;
+}
+
+.subheading {
+    font-size: 28px;
+    font-family: "Monotage Sans";
+    letter-spacing: 1.5px;
+    width: 290px; 
+    text-align: left; 
+    word-wrap: break-word;
+    word-break: break-word; 
+    margin: 0;
+}
+
+.heading {
+    font-size: 42px;
+    font-family: "Monotage Sans";
+    letter-spacing: 1.5px;
+    width: 290px; 
+    text-align: left; 
+    word-wrap: break-word;
+    word-break: break-word;
+    margin: 0;
+}
+  
+.go-back-button {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+  }
+  
+.go-back-button img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #666;
+}
+
+/* NEXT PAGES STYLES - START */
+
+.main-body {
+    display: flex;
+    direction: row;
+}
+
+.bigpic {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-image {
+    width: 515px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-left: 95px;
+    margin-top: 67px;
+}
+
+.text {
+    display: flex;
+    width: 589px;
+    height: 445px;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-left: 70px;
+    flex-shrink: 0;
+}
+
+.top {
+    color: white;
+    font-family: "Monotage Sans";
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    width: 589px;
+}
+
+.description {
+    color: white;
+    font-family: "Monotage Sans";
+    font-size: 38px;
+    line-height: 1.6;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    line-height: 0.9;
+    width: 589px;
+}
+
+.sum {
+    font-size: 37px;
+    font-family: "Monotage Sans";
+    color: white;
+    margin-bottom: 0px;
+    letter-spacing: 1.5px;
+    width: 589px;
+    margin-top: 0px;
+}
+
+.qr-flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.qr-text {
+    color: #FF5C00;
+    font-family: "Monotage Sans";
+    font-size: 35px;
+    line-height: 1;
+    letter-spacing: 1.5px;
+    margin-right: 95px;
+    width: 240px;
+}
+
+.qr-code {
+    height: 120px;
+    width: 120px;
+    background-size: cover;
+}

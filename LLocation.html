@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1366, initial-scale=1.0">
+    <title>Location Page</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="locationmap.css">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Top section with text and small image -->
+        <div class="top-section">
+            <div class="title">
+                <span>WHERE TO FIND US</span>
+                <img src="./images/Location.png" alt="Location Icon" class="icon">
+            </div>
+        </div>
+
+        <div id="menuBtn" onclick="openPopup()">
+            <div class="burger-icon"></div>
+            <div class="burger-icon"></div>
+            <div class="burger-icon"></div>
+        </div>
+
+        <!-- Large map image at the bottom -->
+        <div class="map-container">
+            <img src="./images/Map.png" alt="Map of Copenhagen" class="map-image">
+        </div>
+    </div>
+
+    <div class="go-back-button">
+        <a href="index.html"><img src="images/arrow-back.png" alt="Go Back" onclick="goBack()"></a>
+     </div>
+
+<script src="script-sub-page.js"></script>
+
+</body>
+</html>
